@@ -3,6 +3,7 @@
 void printWelcomeMenu();
 void printOptions();
 void add();
+void subtract();
 
 
 void main() {
@@ -20,7 +21,15 @@ void main() {
 	{
 	case 1:
 		add();
+		break;
+	case 2:
+		subtract();  // Call subtract function
+		break;
+	default:
+		printf("Invalid operation number.\n");  // Handle invalid input
+		break;
 	}
+
 
 }
 
@@ -45,3 +54,16 @@ void add() {
 	result = num1 + num2;
 	printf("%lf + %lf = %lf\n", num1, num2, result);
 }
+
+void subtract()
+{
+	int num1, num2, result;
+	printf("Enter the value for num1:");
+	scanf_s("%d", &num1);
+	printf("Enter the value for num2:");
+	scanf_s("%d", &num2);
+	result = num1 - num2;
+	printf("%d - %d = %d\n", num1, num2, result);
+}
+	
+	
